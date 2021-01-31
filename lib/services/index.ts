@@ -1,10 +1,10 @@
 import { Config, InstanceMap } from '@/types';
 
 import { ClientMap } from '../clients';
-import ExampleManager from './exampleManager';
+import WebhookManager from './webhookManager';
 
 const SERVICES = {
-  exampleManager: ExampleManager,
+  webhookManager: WebhookManager,
 } as const;
 
 export type ServiceMap = InstanceMap<typeof SERVICES>;

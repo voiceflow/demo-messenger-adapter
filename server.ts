@@ -32,7 +32,7 @@ class Server {
 
     this.app = express();
 
-    if (process.env.NODE_ENV === 'local') {
+    if (process.env.NODE_ENV === 'local2') {
       this.server = https.createServer(
         {
           key: fs.readFileSync('./certs/localhost.key'),

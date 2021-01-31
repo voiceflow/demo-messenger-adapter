@@ -5,7 +5,7 @@ import { Config } from '@/types';
 
 import { ClientMap } from '../clients';
 import { ServiceMap } from '../services';
-import Example from './example';
+import Webhook from './webhook';
 
 type Options = {
   config: Config;
@@ -19,7 +19,7 @@ type Options = {
  */
 const buildControllers = ({ config, clients, services, responseBuilder }: Options) => {
   const controllers = {
-    example: new Example({ config, clients, services }),
+    webhook: new Webhook({ config, clients, services }),
   };
 
   buildRoutes(controllers, responseBuilder);

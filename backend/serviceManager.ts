@@ -1,5 +1,4 @@
 import { ResponseBuilder } from '@voiceflow/backend-utils';
-import secretsProvider from '@voiceflow/secrets-provider';
 
 import { buildClients, buildControllers, buildMiddleware, buildServices, ClientMap, ControllerMap, MiddlewareMap, ServiceMap } from '@/lib';
 import { Config } from '@/types';
@@ -43,9 +42,8 @@ class ServiceManager {
   /**
    * Stop services
    */
-  async stop() {
-    await secretsProvider.stop();
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  async stop() {}
 }
 
 export default ServiceManager;

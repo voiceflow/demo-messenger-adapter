@@ -12,17 +12,8 @@ const CONFIG: Config = {
   NODE_ENV: getProcessEnv('NODE_ENV'),
   PORT: getProcessEnv('PORT'),
 
-  AWS_ACCESS_KEY_ID: optionalProcessEnv('AWS_ACCESS_KEY_ID'),
-  AWS_SECRET_ACCESS_KEY: optionalProcessEnv('AWS_SECRET_ACCESS_KEY'),
-  AWS_REGION: optionalProcessEnv('AWS_REGION'),
-  AWS_ENDPOINT: optionalProcessEnv('AWS_ENDPOINT'),
-
-  DYNAMO_ENDPOINT: optionalProcessEnv('DYNAMO_ENDPOINT'),
-
-  // Secrets configuration
-  SECRETS_PROVIDER: getProcessEnv('SECRETS_PROVIDER'),
-  API_KEYS_SECRET: optionalProcessEnv('API_KEYS_SECRET'),
-  MAIN_DB_SECRET: optionalProcessEnv('MAIN_DB_SECRET'),
+  GENERAL_RUNTIME_ENDPOINT: getProcessEnv('GENERAL_RUNTIME_ENDPOINT'),
+  VERIFY_TOKEN: getProcessEnv('VERIFY_TOKEN'),
 
   // Release information
   GIT_SHA: optionalProcessEnv('GIT_SHA'),

@@ -1,23 +1,17 @@
-import secretsProvider from '@voiceflow/secrets-provider';
-
 import { Config } from '@/types';
 
-import DocClient from './docClient';
-import Pool from './pool';
+import KVStoreClient from './kvstore';
 import Static from './static';
 
 /**
  * Build all clients
  */
 const buildClients = (config: Config) => {
-  const pool = Pool();
-  const docClient = DocClient(config);
-
+  const kvstore = KVStoreClient(config);
+  const statics = Static(config);
   return {
-    ...Static,
-    pool,
-    docClient,
-    secretsProvider,
+    ...statics,
+    kvstore,
   };
 };
 

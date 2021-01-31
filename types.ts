@@ -4,17 +4,8 @@ export interface Config {
   NODE_ENV: string;
   PORT: string;
 
-  AWS_ACCESS_KEY_ID: string | null;
-  AWS_SECRET_ACCESS_KEY: string | null;
-  AWS_REGION: string | null;
-  AWS_ENDPOINT: string | null;
-
-  DYNAMO_ENDPOINT: string | null;
-
-  // Secrets configuration
-  SECRETS_PROVIDER: string;
-  API_KEYS_SECRET: string | null;
-  MAIN_DB_SECRET: string | null;
+  GENERAL_RUNTIME_ENDPOINT: string;
+  VERIFY_TOKEN: string;
 
   // Release information
   GIT_SHA: string | null;

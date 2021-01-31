@@ -13,6 +13,7 @@ const CONFIG: Config = {
   PORT: getProcessEnv('PORT'),
 
   GENERAL_RUNTIME_ENDPOINT: getProcessEnv('GENERAL_RUNTIME_ENDPOINT'),
+  MESSENGER_API_ENDPOINT: getProcessEnv('MESSENGER_API_ENDPOINT'),
   VERIFY_TOKEN: getProcessEnv('VERIFY_TOKEN'),
 
   // Release information

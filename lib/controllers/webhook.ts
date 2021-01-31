@@ -39,7 +39,7 @@ class WebhookController extends AbstractController {
     }
 
     // Iterates over each entry - there may be multiple if batched
-    body.entry.forEach((entry: any) => {
+    body.entry.forEach(async (entry: any) => {
       // Gets the body of the webhook event
       const webhookEvent = entry.messaging[0];
 
@@ -57,7 +57,7 @@ class WebhookController extends AbstractController {
       // SenderID -> Who is interacting with the app?
       // AppID -> What is the target "skill"?
       // Message -> Text
-      return webhookManager.handleMessage(webhookEvent.sender.id, webhookEvent.recipient.id, webhookEvent.message.text);
+      await webhookManager.handleMessage(webhookEvent.sender.id, webhookEvent.recipient.id, webhookEvent.message.text);
     });
 
     return 'EVENT_RECEIVED';

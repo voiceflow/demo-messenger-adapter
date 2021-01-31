@@ -8,7 +8,8 @@
       "runtimeExecutable": "node",
       "env": {
         "NODE_ENV": "local",
-        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+        "LOG_LEVEL": "trace"
       },
       "runtimeArgs": [
         "--nolazy",

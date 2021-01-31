@@ -4,6 +4,7 @@ export interface Config {
   NODE_ENV: string;
   PORT: string;
 
+  MESSENGER_API_ENDPOINT: string;
   GENERAL_RUNTIME_ENDPOINT: string;
   VERIFY_TOKEN: string;
 

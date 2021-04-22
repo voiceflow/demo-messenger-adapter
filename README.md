@@ -77,5 +77,5 @@ yarn lint
 Run unit tests with `mocha`.
 
 ```sh
-yarn test
+yarn test:run
 ```

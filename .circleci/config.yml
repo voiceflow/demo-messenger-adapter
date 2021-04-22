@@ -57,7 +57,7 @@ jobs:
       - run:
           name: "Run tests"
           command: |
-            yarn test
+            yarn test:run
       # Additional steps to run test job below:
 
   build-push-image:

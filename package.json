@@ -127,6 +127,7 @@
     "local:watch": "NODE_ENV=local forever --watch -c \"ts-node -r tsconfig-paths/register\" start.ts",
     "prepare": "yarn build",
     "start": "NODE_ENV=production node --max-old-space-size=8192 build/start.js",
+    "test": "yarn test:run",
     "test:run": "NODE_ENV=test nyc ts-mocha --paths --opts mocha.opts"
   }
 }

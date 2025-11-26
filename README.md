@@ -1,3 +1,6 @@
+> [!CAUTION]
+> Update Nov 26, 2025: This repository has been archived and will not accept further changes.
+
 # backend-template
 
 Backend application template 
